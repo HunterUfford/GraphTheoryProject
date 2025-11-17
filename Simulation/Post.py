@@ -1,4 +1,3 @@
 class Post:
-    def __init__(self, content, author):
-        self.content = content
+    def __init__(self, author):
         self.author = author
