@@ -4,6 +4,7 @@ import json
 DATA_USERS_FOLDER = "data/users"
 
 def load_all_users(folder=DATA_USERS_FOLDER):
+    ''' Load all user JSON files from the specified folder and return a dictionary of user data '''
     users = {}
     for filename in os.listdir(folder):
         if filename.endswith(".json"):
@@ -20,10 +21,10 @@ def compute_statistics(users):
 
     # Handle case with no users
     if n == 0:
+        print("No users found.")
         return 0, 0, None, 0
     
     max_followers = -1
-    top_user_id = None
 
     for user_id, data in users.items():
         followers = set(data["followers"])
@@ -44,7 +45,6 @@ def compute_statistics(users):
     return avg_followers, avg_mutuals, top_user_name, max_followers
 
 if __name__ == "__main__":
-    # load all users to compute stataistics
     users = load_all_users()
     avg_followers, avg_mutuals, top_user, max_followers = compute_statistics(users)
     
