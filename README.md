@@ -20,7 +20,7 @@ cd Simulation # Navigate to Simulation folder
 python models/user_generator.py
 python recommender.py
 python data_analysis.py
-``
+```
 
 # /Simulation/models/user_generator.py
 
