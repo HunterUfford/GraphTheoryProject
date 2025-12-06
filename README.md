@@ -14,6 +14,14 @@ The main files to run in the demo are:
 ```
 You can run them like any other python script after you download their dependencies.
 
+Example run statments:
+```
+cd Simulation # Navigate to Simulation folder
+python models/user_generator.py
+python recommender.py
+python data_analysis.py
+``
+
 # /Simulation/models/user_generator.py
 
 ***This script must be run before the other two will work!***
